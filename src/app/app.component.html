@@ -1,0 +1,25 @@
+<div class="kalkulator">
+  <h1>
+      KALKULAČKA <br>
+  </h1>
+
+  <input name="prvniCislo" type="number" [(ngModel)] ="prvniCislo" placeholder="První číslo"> 
+  <br>
+  <input name="druheCislo" type="number" [(ngModel)] ="druheCislo" placeholder="Druhé číslo"> 
+
+  <br>
+  <div class="operace" >
+      <button (click)="scitani()"> + </button> 
+      <button (click)="odcitani()"> - </button> <br>
+      <button (click)="nasobeni()"> x </button> 
+      <button (click)="deleni()">  /  </button>
+  </div>
+  
+  <br>
+
+  <div class="vysledek">
+    {{vysledek}}
+  </div>
+
+
+</div>
