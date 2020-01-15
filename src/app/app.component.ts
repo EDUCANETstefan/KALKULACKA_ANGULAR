@@ -1,36 +1,59 @@
-import { Component, SystemJsNgModuleLoader } from '@angular/core';
-
+import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-project';
-
-
-  public prvniCislo:number;
-  public druheCislo:number;
-  public vysledek;
-
-  scitani() {
-    this.vysledek = this.prvniCislo + this.druheCislo;
+  title = `my-project`;
+  vysledek: any = '';
+  nula() {
+    this.vysledek = this.vysledek + 0;
+  }
+  jedna() {
+    this.vysledek = this.vysledek + 1;
+  }
+  dva() {
+    this.vysledek = this.vysledek + 2;
+  }
+  tri() {
+    this.vysledek = this.vysledek + 3;
+  }
+  ctyri() {
+    this.vysledek = this.vysledek + 4;
+  }
+  pet() {
+    this.vysledek = this.vysledek + 5;
+  }
+  sest() {
+    this.vysledek = this.vysledek + 6;
+  }
+  sedm() {
+    this.vysledek = this.vysledek +  7;
+  }
+  osm() {
+    this.vysledek = this.vysledek +  8;
+  }
+  devet() {
+    this.vysledek = this.vysledek +  9;
+  }
+  plus() {
+    this.vysledek = this.vysledek +  '+';
+  }
+  minus() {
+    this.vysledek = this.vysledek +  '-';
+  }
+  krat() {
+    this.vysledek = this.vysledek +  '*';
+  }
+  deleno() {
+    this.vysledek = this.vysledek +  '/';
+  }
+  ac() {
+    this.vysledek = '';
   }
 
-  odcitani() {
-    this.vysledek = this.prvniCislo - this.druheCislo;
+  vypocet() {
+    this.vysledek = eval(this.vysledek);
   }
-
-  nasobeni() {
-    this.vysledek = this.prvniCislo * this.druheCislo;
-  }
-
-  deleni() {
-    this.vysledek = this.prvniCislo / this.druheCislo;
-    if(this.prvniCislo == 0 || this.druheCislo == 0) {
-      this.vysledek = "Nulou se dělit nedá";
-    }
-  }
-
-  
 }

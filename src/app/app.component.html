@@ -1,25 +1,32 @@
-<div class="kalkulator">
-  <h1>
-      KALKULAČKA <br>
-  </h1>
+<div class="container">
+  <div class="kalkulator">
 
-  <input name="prvniCislo" type="number" [(ngModel)] ="prvniCislo" placeholder="První číslo"> 
-  <br>
-  <input name="druheCislo" type="number" [(ngModel)] ="druheCislo" placeholder="Druhé číslo"> 
+    <input type="text" placeholder="0" name="display" class="displayboard"  [(ngModel)]="vysledek">
 
-  <br>
-  <div class="operace" >
-      <button (click)="scitani()"> + </button> 
-      <button (click)="odcitani()"> - </button> <br>
-      <button (click)="nasobeni()"> x </button> 
-      <button (click)="deleni()">  /  </button>
-  </div>
-  
-  <br>
-
-  <div class="vysledek">
-    {{vysledek}}
-  </div>
-
-
+  <table>
+    <tr>
+      <td><input class="tlacitko2" type="button" value="AC"(click)="ac()"></td>
+      <td><input class="tlacitko2" type="button" value="/"(click)="deleno()"></td>
+      <td><input class="tlacitko2" type="button" value="*"(click)="krat()"></td>
+      <td><input class="tlacitko2" type="button" value="="(click)="vypocet()"></td>
+    </tr>
+    <tr>
+      <td><input class="tlacitko" type="button" value="7"(click)="sedm()"></td>
+      <td><input class="tlacitko" type="button" value="8"(click)="osm()"></td>
+      <td><input class="tlacitko" type="button" value="9"(click)="devet()"></td>
+      <td><input class="tlacitko2" type="button" value="-"(click)="minus()"></td>
+    </tr>
+    <tr>
+      <td><input class="tlacitko" type="button" value="4"(click)="ctyri()"></td>
+      <td><input class="tlacitko" type="button" value="5"(click)="pet()"></td>
+      <td><input class="tlacitko" type="button" value="6"(click)="sest()"></td>
+      <td><input class="tlacitko2" type="button" value="+"(click)="plus()"></td>
+    </tr>
+    <tr>
+      <td><input class="tlacitko" type="button" value="1"(click)="jedna()"></td>
+      <td><input class="tlacitko" type="button" value="2"(click)="dva()"></td>
+      <td><input class="tlacitko" type="button" value="3"(click)="tri()"></td>
+      <td><input class="tlacitko" type="button" value="0"(click)="nula()"></td>
+    </tr>
+  </table>
 </div>
